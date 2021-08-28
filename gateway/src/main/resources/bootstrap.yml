@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: test
+---
+server:
+  port: 8008
+spring:
+  profiles: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: a6c276fe-f090-47c3-adde-4ff2db6a9d9e
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: a6c276fe-f090-47c3-adde-4ff2db6a9d9e
+        group: DEFAULT_GROUP
+        file-extension: yml
+    gateway:
+      routes:
+        - id: cloud-gateway
+          uri: lb://cloud-gateway
+          predicates:
+            - Path=/gateway/api/**
+          filters:
+            - StripPrefix=1
+        - id: cloud-engine
+          uri: lb://cloud-engine
+          predicates:
+            - Path=/engine/api/**
+          filters:
+            - StripPrefix=1
+  application:
+    name: cloud-gateway

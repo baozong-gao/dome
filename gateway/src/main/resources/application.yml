@@ -1,0 +1,3 @@
+dubbo:
+  registry:
+    address: spring-cloud://localhost:8848
