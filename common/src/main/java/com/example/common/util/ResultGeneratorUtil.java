@@ -18,5 +18,14 @@ public class ResultGeneratorUtil {
                 .build();
     }
 
+    public static BaseResponse succeed(String data) {
+        return BaseResponse.builder()
+                .code(WebStatusCode.SUCCEED.getCode())
+                .data(data)
+                .build();
+    }
+
+
+
 
 }

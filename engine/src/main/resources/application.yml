@@ -7,3 +7,8 @@ dubbo:
       port: -1
   registry:
     address: spring-cloud://127.0.0.1:8848
+
+# 測試配置中心
+test:
+  user:
+    name: gbz
