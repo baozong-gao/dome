@@ -16,6 +16,10 @@ spring:
         namespace: a6c276fe-f090-47c3-adde-4ff2db6a9d9e
         group: DEFAULT_GROUP
         file-extension: yml
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8719
     gateway:
       routes:
         - id: cloud-gateway
