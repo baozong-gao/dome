@@ -1,3 +1,25 @@
 dubbo:
   registry:
     address: spring-cloud://localhost:8848
+
+swagger:
+  front:
+    groupName: 前端API
+    basePackage: com.example.gateway.controller
+    title: 前端API
+    description: 前端API
+    contactName: gbz
+    contactEmail: 692088846@qq.com
+    contactUrl: www.baidu.com
+    version: 1.0
+    enable: false
+  back:
+    groupName: 后端API
+    basePackage: com.example.gateway.controller
+    title: 后端API
+    description: 后端API
+    contactName: gbz
+    contactEmail: 692088846@qq.com
+    contactUrl: www.baidu.com
+    version: 1.0
+    enable: true
